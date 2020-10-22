@@ -1,0 +1,121 @@
+
+        body{
+            background-color: #fff;
+            font-size: 15px;
+            font-family: serif;
+            margin: 0;
+        }
+        p{
+            width: 60vw;
+            margin: auto;
+        }
+        h2{
+            font-size: 30px;
+            background: linear-gradient(transparent 90%, #000 70%);
+            display:inline-block;
+        }
+        .top{
+            position: relative;
+            text-align: center;
+        }
+        .topimage{
+            width: 100%;
+        }
+        .titleimage{
+            width: 100%;
+        }
+        .title{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Roman';
+            font-size: 40px;
+            color: #000;
+        }
+        .watch{
+            width:80%;
+        }
+        
+        .video{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,0%);
+            text-align: center;
+        }
+        .logo{
+            text-align: center;
+        }
+       
+        .logo img{
+            transition:0.5s all;
+        }
+
+        .cube{
+            width: 10%;
+            transform: translate(0%,-0%);
+            transition: all 1s;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .cube:hover{
+            width: 15%;
+            transform: translate(0%,-0%);
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+       
+        
+        .story{
+            padding-top: 100px;
+            width: 60vw;
+            margin: auto;
+            text-align: center;
+        }
+        .photo{
+            padding-top: 100px;
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            height: 100%;
+        }
+        .storyimg{
+            width: 30vw;
+            padding-bottom: 40px;
+        }
+        
+        .story2{
+            
+        }
+        .animation{
+            width: 100%;
+            text-align: center;
+            height: 5000px;
+            background-color: #f0f4ff;
+        }
+        .stoimg{
+            text-align: center;
+        }
+        .img1{
+            width: 1%;
+            padding-top: 20px;
+        }
+        .timeline{
+            text-align: center;
+        }
+        .tweet{
+            padding-top: 100px;
+            width: 50vw;
+            height: 60vw;
+            margin: auto;
+        }
+        element{
+            margin: 0;
+        }
+       
+  
