@@ -114,8 +114,25 @@
             height: 60vw;
             margin: auto;
         }
-        element{
-            margin: 0;
+        #galery{
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-50%);
+            display: flex;
+            overflow-x: scroll;
+            height: 50vh;
+            border: medium solid blue;
+        }
+        .model{
+            position: relative;
+            width: auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(0%,-50%);
+            border: medium solid black;
+        }
+        .modelcontainer{
+            width: 30vw;
         }
        
   
