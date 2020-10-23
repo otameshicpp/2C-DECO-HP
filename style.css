@@ -89,9 +89,9 @@
             padding-bottom: 40px;
         }
 
-        .story2{
+        /* .story2{
 
-        }
+        } */
         .animation{
             width: 100%;
             text-align: center;
@@ -135,7 +135,7 @@
             width: 30vw;
         }
 
-        @@media screen and ( max-width: 767;){
+        @media screen and ( max-width: 767px){
 
 
           body{
@@ -145,7 +145,8 @@
               margin: 0;
           }
           .probox{
-            font-size: 30px;
+            /* font-size: 15px;
+            font-family: 'Courier New', Courier, monospace; */
           }
           p{
               width: 30vw;
