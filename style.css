@@ -144,6 +144,9 @@
               font-family: serif;
               margin: 0;
           }
+          .probox{
+            font-size: 30px;
+          }
           p{
               width: 30vw;
               margin: auto;
