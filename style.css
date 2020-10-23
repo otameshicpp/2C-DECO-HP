@@ -2,7 +2,7 @@
         body{
             background-color: #fff;
             font-size: 15px;
-            font-family:'Courier New', Courier, monospace; 
+            font-family: serif;
             margin: 0;
         }
         p{
@@ -145,7 +145,8 @@
               margin: 0;
           }
           .probox{
-            font-size: 15px;
+            /* font-size: 15px;
+            font-family: 'Courier New', Courier, monospace; */
           }
           p{
               width: 30vw;
