@@ -35,7 +35,7 @@
         .watch{
             width:80%;
         }
-        
+
         .video{
             position: absolute;
             top: 55%;
@@ -46,7 +46,7 @@
         .logo{
             text-align: center;
         }
-       
+
         .logo img{
             transition:0.5s all;
         }
@@ -68,8 +68,8 @@
             padding-top: 100px;
             padding-bottom: 100px;
         }
-       
-        
+
+
         .story{
             padding-top: 100px;
             width: 60vw;
@@ -88,9 +88,9 @@
             width: 30vw;
             padding-bottom: 40px;
         }
-        
+
         .story2{
-            
+
         }
         .animation{
             width: 100%;
@@ -134,5 +134,60 @@
         .modelcontainer{
             width: 30vw;
         }
-       
-  
+
+        @@media screen and ( max-width: 767;){
+
+
+          body{
+              background-color: #fff;
+              font-size: 7.5px;
+              font-family: serif;
+              margin: 0;
+          }
+          p{
+              width: 60vw;
+              margin: auto;
+          }
+          h2{
+              font-size: 15px;
+              background: linear-gradient(transparent 90%, #000 70%);
+              display:inline-block;
+          }
+          .cube{
+              width: 20%;
+              transform: translate(0%,-0%);
+              transition: all 1s;
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+          }
+          .cube:hover{
+              width: 15%;
+              transform: translate(0%,-0%);
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+          }
+
+
+          .story{
+              padding-top: 30px;
+              width: 60vw;
+              margin: auto;
+              text-align: center;
+          }
+          .photo{
+              padding-top: 30px;
+              padding: 0;
+              width: 100%;
+              margin: auto;
+              text-align: center;
+              height: 100%;
+          }
+          .storyimg{
+              width: 30vw;
+              padding-bottom: 40px;
+          }
+        }
