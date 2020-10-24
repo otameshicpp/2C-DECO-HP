@@ -1,3 +1,6 @@
+<filesMatch ".(ico|jpg|jpeg|png|gif)$">
+ Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
 <IfModule mod_expires.c>
     ExpiresByType text/css "access plus 1 weeks"
     ExpiresByType text/js "access plus 1 weeks"
