@@ -79,16 +79,16 @@
             <p>あなたは今、地球にいる。</p>
             <img src="point.png" class="img1">
             <p>これらが宇宙船から見つかった物の一部だ</p>
-            <p>残念ながら使い方を理解することはできなかった</p>
+            <p>残念ながら使い方を解析することはできなかった</p>
             <p>しかし、宇宙から送られてきた3Dデータを閲覧することはできる</p>
             <img src="point.png" class="img1">
             <p>サムネイルをクリックしてみてほしい</p>
             <p>3Dモデルを見ることができるはずだ</p>
             <img src="point.png" class="img1">
             <p>ちなみに、ARCore・ARKitに対応している端末なら右下にAR表示マークが現れるはずだ</p>
-            <p>※macOS版のSafariには対応していません(iPhone版は正常に表示されます)</p>
+            <p>※macOS版のSafariには対応していません (iOS版は正常に表示されます)</p>
         </div>
-
+        <div id="AR-show"></div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
@@ -106,6 +106,26 @@
     <script>
         let windowHeight = window.innerHeight;
         let windowWidth = window.innerWidth;
+        let k = document.getElementsByClassName("AR-thumbnail");
+        for (let i = 0; i < k.length; i++) {
+            // console.log(k[i]);
+            k[i].addEventListener("click", function () {
+                let show = document.getElementById('AR-show');
+                console.log("show")
+                show.style.display = "block";
+                show.style.position = "fixed"
+                show.style.top = "50vh"
+                show.style.left = "50vw"
+                show.style.transform = "translate(-50%,-50%)"
+                show.style.zIndex = 9999
+                $('#AR-show').animate({
+                    opacity: 1,
+                    width: "100vw",
+                    height: "100vh"
+                }, 300)
+
+            })
+        }
         let mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
@@ -166,6 +186,14 @@
             font-family: serif;
             width: 80%;
             border-bottom: black solid;
+        }
+
+        #AR-show {
+            display: none;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            background-color: green;
         }
     </style>
 </body>
