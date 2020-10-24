@@ -27,6 +27,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+
+    </script>
 </head>
 
 <body>
@@ -90,27 +93,41 @@
         </div>
         <div id="AR-show">
             <div class="modelcontainer">
-                <p class="model" style="margin: auto;">カエル2</p>
+                <h1 class="model">カエル2</h1>
                 <model-viewer ar alt="カエル" src="3Dmodels/kaeru.glb" ios-src="3Dmodels/kaeru.usdz"
                     style="width:60vw;height:60vh;display: block; z-index: 99999; margin: auto;"
                     background-color="#70BCD1" shadow-intensity="0.7" camera-controls interaction-prompt="auto"
                     auto-rotate ar magic-leap>
-
-
                 </model-viewer>
+                <h1 id="batsu">×</h1>
             </div>
         </div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
-                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
-                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
-                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+                <div class="swiper-slide">
+                    <p style="display: none;">kaeru</p>
+                    <p style="display: none;">カエル1</p>
+                    <img class="AR-thumbnail" src="kaeru_thumbnail.png">
+                </div>
+                <div class="swiper-slide">
+                    <p style="display: none;">kaeru</p>
+                    <p style="display: none;">カエル2</p>
+                    <img class="AR-thumbnail" src="kaeru_thumbnail.png">
+                </div>
+                <div class="swiper-slide">
+                    <p style="display: none;">kaeru</p>
+                    <p style="display: none;">カエル3</p>
+                    <img class="AR-thumbnail" src="kaeru_thumbnail.png">
+                </div>
+                <div class="swiper-slide">
+                    <p style="display: none;">kaeru</p>
+                    <p style="display: none;">カエル4</p>
+                    <img class="AR-thumbnail" src="kaeru_thumbnail.png">
+                </div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            <div class="swiper-scrollbar"></div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
@@ -119,16 +136,20 @@
         let windowWidth = window.innerWidth;
         let k = document.getElementsByClassName("AR-thumbnail");
         for (let i = 0; i < k.length; i++) {
+            k[i].style.zIndex = 99999
             // console.log(k[i]);
             k[i].addEventListener("click", function () {
+                let modelName = k[i].children;
+                console.log(modelName[0].textContent);
+                // document.getElementById("model").textContent = modelName.textContent;
                 let show = document.getElementById('AR-show');
                 console.log("show")
                 show.style.display = "block";
                 show.style.position = "fixed"
                 show.style.top = "50vh"
                 show.style.left = "50vw"
-                show.style.transform = "translate(-50%,-50%)"
                 show.style.zIndex = 9999
+                show.style.transform = "translate(-50%,-50%)"
                 $('#AR-show').animate({
                     opacity: 1,
                     width: "100vw",
@@ -137,18 +158,30 @@
 
             })
         }
+        let batsu = document.getElementById("batsu");
+        batsu.addEventListener("click", function () {
+            let show = document.getElementById('AR-show');
+            console.log("hide")
+            $('#AR-show').animate({
+                opacity: 0,
+                width: "0",
+                height: "0",
+                display: "none",
+                zIndex: 0
+            }, 300)
+        })
         let mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
+            allowTouchMove: false,
             speed: 1000,
-            // grabCursor: true,
             width: windowWidth * .8,
+            // effect: "fade",
             slidesPerView: 3,
             //ページネーション表示の設定
             pagination: {
                 el: '.swiper-pagination', //ページネーションの要素
                 type: 'bullets', //ページネーションの種類
-                clickable: true, //クリックに反応させる
             },
 
             //ナビゲーションボタン（矢印）表示の設定
@@ -162,9 +195,32 @@
                 el: '.swiper-scrollbar', //要素の指定
             },
         })
-        // mySwiper.on('slideChange', function () {
-        //     console.log('現在のスライド番号： ' + (mySwiper.realIndex + 1));
-        // });
+        // let mySwiper = new Swiper('.swiper-container', {
+        //     pagination: {
+        //         el: '.swiper-pagination', //ページネーションの要素
+        //         type: 'bullets', //ページネーションの種類
+        //     },
+        //     navigation: {
+        //         nextEl: '.swiper-button-next', //「次へボタン」要素の指定
+        //         prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
+        //     },
+        //     loop: true,
+        //     speed: 1000,
+        //     width: windowWidth * .8,
+        //     slidesPerView: 3
+        // })
+        // window.addEventListener('DOMContentLoaded', function () {
+        //     var swiper = new Swiper('.swiper-container', {
+        //         pagination: '.swiper-pagination',
+        //         paginationClickable: true,
+        //         nextButton: '.swiper-button-next',
+        //         prevButton: '.swiper-button-prev',
+        //         loop: true,
+        //         speed: 1000,
+        //         width: windowWidth * .8,
+        //         slidesPerView: 3
+        //     });
+        // }, false);
     </script>
     <style>
         * {
@@ -183,6 +239,7 @@
 
         .AR-thumbnail {
             width: 80%;
+            cursor: pointer;
         }
 
         body {
@@ -205,6 +262,20 @@
             height: 0;
             opacity: 0;
             background-color: green;
+            z-index: 0;
+            position: fixed;
+        }
+
+        #batsu {
+            position: absolute;
+            color: white;
+            top: 0;
+            right: 2vw;
+            margin: 0;
+            font-weight: 900;
+            font-size: min(50px, 5vmax);
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
         }
     </style>
 </body>
