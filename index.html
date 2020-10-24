@@ -76,10 +76,11 @@
         <div class="stoimg">
             <p>あなたは今、宇宙にいる。</p>
             <img src="point.png" class="img1">
-            <h1 id="box" class="probox" style="
+            <!-- <h1 id="box" class="probox" style="
             z-index: 9999; color: white; top: 40vh;-webkit-text-fill-color: transparent;
             ">
-                その理由を突き止め、また、これからあなたの前に立ちはだかる</h1>
+                その理由を突き止め、また、これからあなたの前に立ちはだかる</h1> -->
+            <p>その理由を突き止め、また、これからあなたの前に立ちはだかる</p>
             <p>イベントからゲットできる「宇宙船のかけら」をゲットして</p>
             <p>地球に無事帰らなければならない</p>
             <img src="point.png" class="img1">
@@ -136,23 +137,23 @@
 
             }
             {
-                let moji = document.getElementById("box");
-                let windowHeight = window.innerHeight;
-                let basho = windowHeight - moji.getBoundingClientRect().top;
+                // let moji = document.getElementById("box");
+                // let windowHeight = window.innerHeight;
+                // let basho = windowHeight - moji.getBoundingClientRect().top;
 
-                if (basho >= windowHeight / 2 - moji.clientHeight * 2) {
-                    basho -= windowHeight / 2 - moji.clientHeight * 2
-                    basho /= 2;
-                    let left = basho / 50
-                    let right = left - 1.5
-                    let colorLeft = "rgba(1,1,1," + left + ")"
-                    let colorRight = "rgba(1,1,1," + right + ")"
+                // if (basho >= windowHeight / 2 - moji.clientHeight * 2) {
+                //     basho -= windowHeight / 2 - moji.clientHeight * 2
+                //     basho /= 2;
+                //     let left = basho / 50
+                //     let right = left - 1.5
+                //     let colorLeft = "rgba(1,1,1," + left + ")"
+                //     let colorRight = "rgba(1,1,1," + right + ")"
 
-                    moji.style.background = "-webkit-linear-gradient(135deg, " + colorRight + + " " + (100 - basho) + "%, " + colorLeft + ")";
-                    moji.style.webkitBackgroundClip = "text";
-                } else {
-                    moji.style.background = "rgba(0,0,0,0)";
-                }
+                //     moji.style.background = "-webkit-linear-gradient(135deg, " + colorRight + + " " + (100 - basho) + "%, " + colorLeft + ")";
+                //     moji.style.webkitBackgroundClip = "text";
+                // } else {
+                //     moji.style.background = "rgba(0,0,0,0)";
+                // }
             }
             {
                 let moji = document.getElementById("setsumei");
