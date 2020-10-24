@@ -88,7 +88,9 @@
         let mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
-
+            speed: 1000,
+            grabCursor: true,
+            slidesPerView: 3,
             //ページネーション表示の設定
             pagination: {
                 el: '.swiper-pagination', //ページネーションの要素
@@ -113,8 +115,8 @@
     </script>
     <style>
         .swiper-container {
-            max-width: 500px;
-            margin: 30px 0;
+            max-width: 100%;
+            margin: 0;
         }
     </style>
 </body>
