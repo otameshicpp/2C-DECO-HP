@@ -88,7 +88,18 @@
             <p>ちなみに、ARCore・ARKitに対応している端末なら右下にAR表示マークが現れるはずだ</p>
             <p>※macOS版のSafariには対応していません (iOS版は正常に表示されます)</p>
         </div>
-        <div id="AR-show"></div>
+        <div id="AR-show">
+            <div class="modelcontainer">
+                <p class="model" style="margin: auto;">カエル2</p>
+                <model-viewer ar alt="カエル" src="3Dmodels/kaeru.glb" ios-src="3Dmodels/kaeru.usdz"
+                    style="width:60vw;height:60vh;display: block; z-index: 99999; margin: auto;"
+                    background-color="#70BCD1" shadow-intensity="0.7" camera-controls interaction-prompt="auto"
+                    auto-rotate ar magic-leap>
+
+
+                </model-viewer>
+            </div>
+        </div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>

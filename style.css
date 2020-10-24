@@ -127,12 +127,13 @@
             position: relative;
             width: auto;
             left: 50%;
-            top: 50%;
-            transform: translate(0%,-50%);
+            transform: translate(-50%,0%);
             border: medium solid black;
         }
         .modelcontainer{
-            width: 30vw;
+            width: 80vw;
+            margin: auto;
+            text-align: center;
         }
 
         @media screen and ( max-width: 767px){
