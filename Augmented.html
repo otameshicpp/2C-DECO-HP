@@ -71,19 +71,36 @@
         background-color="#70BCD1" shadow-intensity="0.7" camera-controls interaction-prompt="auto" auto-rotate ar
         magic-leap>
     </model-viewer> -->
-    <h1 id="title">AR作品集</h1>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
-            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
-            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
-            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+    <div class="content">
+        <div class="story" style="padding-top: 5vh;">
+            <img src="story_img.png" class="storyimg">
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
-    </div>
+        <div class="stoimg">
+            <p>あなたは今、地球にいる。</p>
+            <img src="point.png" class="img1">
+            <p>これらが宇宙船から見つかった物の一部だ</p>
+            <p>残念ながら使い方を理解することはできなかった</p>
+            <p>しかし、宇宙から送られてきた3Dデータを閲覧することはできる</p>
+            <img src="point.png" class="img1">
+            <p>サムネイルをクリックしてみてほしい</p>
+            <p>3Dモデルを見ることができるはずだ</p>
+            <img src="point.png" class="img1">
+            <p>ちなみに、ARCore・ARKitに対応している端末なら右下にAR表示マークが現れるはずだ</p>
+            <p>※macOS版のSafariには対応していません(iPhone版は正常に表示されます)</p>
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+                <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
     <script>
@@ -126,7 +143,7 @@
         .swiper-container {
             position: relative;
             max-width: 80vw;
-            margin: auto;
+            margin: 10vh auto;
         }
 
         .swiper-slide {
@@ -147,6 +164,8 @@
             margin-top: 100;
             margin-bottom: 100;
             font-family: serif;
+            width: 80%;
+            border-bottom: black solid;
         }
     </style>
 </body>
