@@ -130,7 +130,8 @@
                 let oya = spaceship.parentElement
                 let dif = spaceship.getBoundingClientRect().top - oya.getBoundingClientRect().top
                 // console.log("spacePictures/" + (Math.round(dif / 1000, 0.1) + 1) + ".png");
-                spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 45) + 1)) + ".png)";
+                let now = (Math.min(87, Math.round(dif / 45) + 1))
+                spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
 
             }
             {
@@ -174,101 +175,19 @@
     </script>
     <script>
         $(document).ready(function () {
-            $('<img src="spacePictures/1.png">');
-            $('<img src="spacePictures/2.png">');
-            $('<img src="spacePictures/3.png">');
-            $('<img src="spacePictures/4.png">');
-            $('<img src="spacePictures/5.png">');
-            $('<img src="spacePictures/6.png">');
-            $('<img src="spacePictures/7.png">');
-            $('<img src="spacePictures/8.png">');
-            $('<img src="spacePictures/9.png">');
-            $('<img src="spacePictures/10.png">');
-            $('<img src="spacePictures/11.png">');
-            $('<img src="spacePictures/12.png">');
-            $('<img src="spacePictures/13.png">');
-            $('<img src="spacePictures/14.png">');
-            $('<img src="spacePictures/15.png">');
-            $('<img src="spacePictures/16.png">');
-            $('<img src="spacePictures/17.png">');
-            $('<img src="spacePictures/18.png">');
-            $('<img src="spacePictures/19.png">');
-            $('<img src="spacePictures/20.png">');
-            $('<img src="spacePictures/21.png">');
-            $('<img src="spacePictures/22.png">');
-            $('<img src="spacePictures/23.png">');
-            $('<img src="spacePictures/24.png">');
-            $('<img src="spacePictures/25.png">');
-            $('<img src="spacePictures/26.png">');
-            $('<img src="spacePictures/27.png">');
-            $('<img src="spacePictures/28.png">');
-            $('<img src="spacePictures/29.png">');
-            $('<img src="spacePictures/30.png">');
-            $('<img src="spacePictures/31.png">');
-            $('<img src="spacePictures/32.png">');
-            $('<img src="spacePictures/33.png">');
-            $('<img src="spacePictures/34.png">');
-            $('<img src="spacePictures/35.png">');
-            $('<img src="spacePictures/36.png">');
-            $('<img src="spacePictures/37.png">');
-            $('<img src="spacePictures/38.png">');
-            $('<img src="spacePictures/39.png">');
-            $('<img src="spacePictures/40.png">');
-            $('<img src="spacePictures/41.png">');
-            $('<img src="spacePictures/42.png">');
-            $('<img src="spacePictures/43.png">');
-            $('<img src="spacePictures/44.png">');
-            $('<img src="spacePictures/45.png">');
-            $('<img src="spacePictures/46.png">');
+            for (var i = 1; i <= 87; i++) {
+                $("<img>").attr("src", "spacePictures_small/" + i + ".png");
+                console.log("spacePictures_small / " + i + ".png");
+
+            }
         })
         setInterval(() => {
-            $('<img src="spacePictures/1.png">');
-            $('<img src="spacePictures/2.png">');
-            $('<img src="spacePictures/3.png">');
-            $('<img src="spacePictures/4.png">');
-            $('<img src="spacePictures/5.png">');
-            $('<img src="spacePictures/6.png">');
-            $('<img src="spacePictures/7.png">');
-            $('<img src="spacePictures/8.png">');
-            $('<img src="spacePictures/9.png">');
-            $('<img src="spacePictures/10.png">');
-            $('<img src="spacePictures/11.png">');
-            $('<img src="spacePictures/12.png">');
-            $('<img src="spacePictures/13.png">');
-            $('<img src="spacePictures/14.png">');
-            $('<img src="spacePictures/15.png">');
-            $('<img src="spacePictures/16.png">');
-            $('<img src="spacePictures/17.png">');
-            $('<img src="spacePictures/18.png">');
-            $('<img src="spacePictures/19.png">');
-            $('<img src="spacePictures/20.png">');
-            $('<img src="spacePictures/21.png">');
-            $('<img src="spacePictures/22.png">');
-            $('<img src="spacePictures/23.png">');
-            $('<img src="spacePictures/24.png">');
-            $('<img src="spacePictures/25.png">');
-            $('<img src="spacePictures/26.png">');
-            $('<img src="spacePictures/27.png">');
-            $('<img src="spacePictures/28.png">');
-            $('<img src="spacePictures/29.png">');
-            $('<img src="spacePictures/30.png">');
-            $('<img src="spacePictures/31.png">');
-            $('<img src="spacePictures/32.png">');
-            $('<img src="spacePictures/33.png">');
-            $('<img src="spacePictures/34.png">');
-            $('<img src="spacePictures/35.png">');
-            $('<img src="spacePictures/36.png">');
-            $('<img src="spacePictures/37.png">');
-            $('<img src="spacePictures/38.png">');
-            $('<img src="spacePictures/39.png">');
-            $('<img src="spacePictures/40.png">');
-            $('<img src="spacePictures/41.png">');
-            $('<img src="spacePictures/42.png">');
-            $('<img src="spacePictures/43.png">');
-            $('<img src="spacePictures/44.png">');
-            $('<img src="spacePictures/45.png">');
-            $('<img src="spacePictures/46.png">');
-        }, 10000);
+            for (var i = 1; i <= 87; i++) {
+                $("<img>").attr("src", "spacePictures_small/" + i + ".png");
+                console.log("spacePictures_small / " + i + ".png");
+
+            }
+        }, 3000);
     </script>
     <style>
         #spaceship {
