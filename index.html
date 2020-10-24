@@ -132,7 +132,7 @@
                 let oya = spaceship.parentElement
                 let dif = spaceship.getBoundingClientRect().top - oya.getBoundingClientRect().top
                 // console.log("spacePictures/" + (Math.round(dif / 1000, 0.1) + 1) + ".png");
-                let now = (Math.min(87, Math.round(dif / 45) + 1))
+                // let now = (Math.min(87, Math.round(dif / 45) + 1))
                 spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
 
             }
