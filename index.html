@@ -60,7 +60,7 @@
     <div class="content">
 
         <div class="top">
-            <img src="key151_smaller.png" class="topimage">
+            <img src="key151_smallerer.jpg" class="topimage">
             <div class="title">
                 <img src="maintitle.png" class="titleimage">
             </div>
@@ -175,14 +175,14 @@
     </script>
     <script>
         $(document).ready(function () {
-            for (var i = 1; i <= 87; i++) {
+            for (var i = 1; i <= 87; i += 2) {
                 $("<img>").attr("src", "spacePictures_small/" + i + ".png");
                 console.log("spacePictures_small / " + i + ".png");
 
             }
         })
         setInterval(() => {
-            for (var i = 1; i <= 87; i++) {
+            for (var i = 1; i <= 87; i += 2) {
                 $("<img>").attr("src", "spacePictures_small/" + i + ".png");
                 console.log("spacePictures_small / " + i + ".png");
 
