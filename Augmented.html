@@ -71,11 +71,13 @@
         background-color="#70BCD1" shadow-intensity="0.7" camera-controls interaction-prompt="auto" auto-rotate ar
         magic-leap>
     </model-viewer> -->
+    <h1 id="title">AR作品集</h1>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="favicon.png" alt=""></div>
-            <div class="swiper-slide"><img src="favicon.png" alt=""></div>
-            <div class="swiper-slide"><img src="favicon.png" alt=""></div>
+            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
+            <div class="swiper-slide"><img class="AR-thumbnail" src="kaeru_thumbnail.png"></div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
@@ -85,12 +87,14 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
     <script>
-        let windowHeight = $(window).height;
+        let windowHeight = window.innerHeight;
+        let windowWidth = window.innerWidth;
         let mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
             speed: 1000,
-            grabCursor: true,
+            // grabCursor: true,
+            width: windowWidth * .8,
             slidesPerView: 3,
             //ページネーション表示の設定
             pagination: {
@@ -115,14 +119,34 @@
         // });
     </script>
     <style>
+        * {
+            font-family: serif;
+        }
+
         .swiper-container {
-            max-width: 100%;
-            margin: 0;
+            position: relative;
+            max-width: 80vw;
+            margin: auto;
         }
 
         .swiper-slide {
-            width: 30vw;
             text-align: center;
+        }
+
+        .AR-thumbnail {
+            width: 80%;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        #title {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100;
+            margin-bottom: 100;
+            font-family: serif;
         }
     </style>
 </body>
