@@ -85,6 +85,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
     <script>
+        let windowHeight = $(window).height;
         let mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
@@ -117,6 +118,11 @@
         .swiper-container {
             max-width: 100%;
             margin: 0;
+        }
+
+        .swiper-slide {
+            width: 30vw;
+            text-align: center;
         }
     </style>
 </body>
