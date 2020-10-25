@@ -26,6 +26,122 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="jquery-3.5.1.min.js"></script>
 </head>
+<body>
+  <div class="start">
+    <p><video src="background3.mp4" autoplay muted></video></p>
+  </div>
+</body>
+<script>
 
-    
-    
+    var $win = $(window);
+
+    $win.on('load resize', function () {
+        var windowWidth = window.innerWidth;
+
+        if (windowWidth > 1024) {
+            console.log(windowWidth)
+            function no_scroll() {
+
+                document.addEventListener("mousewheel", scroll_control, { passive: false });
+
+                document.addEventListener("touchmove", scroll_control, { passive: false });
+            }
+
+            function return_scroll() {
+
+                document.removeEventListener("mousewheel", scroll_control, { passive: false });
+
+                document.removeEventListener('touchmove', scroll_control, { passive: false });
+            }
+
+            function scroll_control(event) {
+                event.preventDefault();
+            }
+
+            $(window).ready(function () {
+                var video = document.getElementsByTagName('video')[0];
+                video.addEventListener('ended', function () {
+                    video.autoplay = false;
+                    $('.start').fadeOut(500);
+                    return_scroll();
+                }, false);
+            });
+
+            $(function () {
+                setTimeout(function () {
+                    no_scroll();
+                    $('.start p').fadeIn(000);
+                }, 00);
+
+
+            });
+
+            function stopload() {
+                $('#loading__wrapper').css('display', 'block');
+                $('#is-loading').delay(900).fadeOut(800);
+                $('#loading').delay(600).fadeOut(300);
+            }
+            $(function () {
+                setTimeout('stopload()', 10000);
+            });
+
+
+        } else if (windowWidth > 768) {
+            document.getElementsByClassName('start')[0].style.display = "none"
+                ;
+
+        } else {
+            document.getElementsByClassName('start')[0].style.display = "none"
+
+                ;
+
+        }
+    });
+</script>
+<style>
+.start {
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9000;
+    padding: 0px;
+    margin: 0px;
+}
+
+.start p {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.start video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+@@media screen and(max-width: 767px;) {
+  .start{
+    display: block;
+  }
+}
+.start{
+
+}
+</style>
