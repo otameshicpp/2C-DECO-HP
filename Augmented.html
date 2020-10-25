@@ -32,6 +32,14 @@
 </head>
 
 <body>
+  <div id="is-loading">
+ <div id="loading">
+  <video src="background.mp4" alt="loadingなう" ></video>
+ </div>
+</div>
+  <div>
+    <img src="cube.png" class="arlogo">
+  </div>
     <div class="content">
         <div class="story" style="padding-top: 5vh;">
             <img src="src/story_img.png" class="storyimg">
@@ -139,6 +147,33 @@
         </div> -->
     </div>
     <script>
+
+    $(function() {
+var h = $(window).height();
+$('#loading__wrapper').css('display','none');
+$('#is-loading ,#loading').height(h).css('display','block');
+});
+
+$(window).load(function () {
+$('#is-loading').delay(900).fadeOut(800);
+$('#loading').delay(600).fadeOut(300);
+$('#loading__wrapper').css('display', 'block');
+});
+
+
+$(function(){
+setTimeout('stopload()',10000);
+});
+
+function stopload(){
+$('#loading__wrapper').css('display','block');
+$('#is-loading').delay(900).fadeOut(800);
+$('#loading').delay(600).fadeOut(300);
+}
+
+
+
+  　　
         let windowHeight = window.innerHeight;
         let windowWidth = window.innerWidth;
         let k = document.getElementsByClassName("AR-thumbnail");
@@ -243,6 +278,10 @@
             font-family: serif;
         }
 
+        .arlogo{
+
+        }
+
         .swiper-container {
             position: relative;
             max-width: 80vw;
@@ -287,6 +326,7 @@
         .modelData {
             display: none;
         }
+
     </style>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script> -->
     <script>
