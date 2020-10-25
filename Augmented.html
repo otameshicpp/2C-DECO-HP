@@ -190,16 +190,16 @@
 
                 });
 
-
-                $(function () {
-                    setTimeout('stopload()', 10000);
-                });
-
                 function stopload() {
                     $('#loading__wrapper').css('display', 'block');
                     $('#is-loading').delay(900).fadeOut(800);
                     $('#loading').delay(600).fadeOut(300);
                 }
+                $(function () {
+                    setTimeout('stopload()', 10000);
+                });
+
+
             } else if (windowWidth > 768) {
                 document.getElementsByClassName('start')[0].style.display = "none"
                     ;
