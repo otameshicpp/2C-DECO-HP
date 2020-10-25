@@ -146,8 +146,13 @@
         </div> -->
     </div>
     <script>
+    var $win = $(window);
 
-        function no_scroll() {
+    $win.on('load resize', function() {
+      var windowWidth = window.innerWidth;
+
+      if (windowWidth > 1024) {
+        // PCの処function no_scroll() {
 
             document.addEventListener("mousewheel", scroll_control, { passive: false });
 
@@ -193,6 +198,13 @@
             $('#is-loading').delay(900).fadeOut(800);
             $('#loading').delay(600).fadeOut(300);
         }
+理
+      } else if (windowWidth > 768) {
+        // TABの処理
+      } else {
+        // SPの処理
+      }
+    });
 
 
 
