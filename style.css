@@ -178,6 +178,16 @@
         .copy{
           text-align: center;
         }
+        #spaceship {
+            position: sticky;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            /* min-width: 100%;
+            min-height: 100%; */
+            top: 0;
+        }
 
         @media screen and ( max-width: 767px){
 
