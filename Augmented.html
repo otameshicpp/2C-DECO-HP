@@ -53,7 +53,7 @@
             <div class="modelcontainer">
                 <h1 class="model">カエル2</h1>
                 <model-viewer ar alt="カエル" id="modellook" src="3Dmodels/kaeru.glb" ios-src="3Dmodels/kaeru.usdz"
-                    style="width:60vw;height:60vh;display: block; z-index: 99999; margin: auto;"
+                    style="width:60vw;height:60vh;display: block; margin: auto;z-index: inherit;"
                     background-color="#70BCD1" shadow-intensity="0.7" camera-controls interaction-prompt="auto"
                     auto-rotate ar magic-leap>
                 </model-viewer>
@@ -93,16 +93,21 @@
             </div>
         </div> -->
         <div
-            style="display: flex; height: 40vh; width: 80vw; margin:auto; padding-top: 5vh; margin-top: 5vh; margin-bottom: 5vh; border-top: black solid;">
+            style="display: flex; height: 40vh; width: 80vw; margin:auto; padding-top: 5vh; margin-top: 5vh; margin-bottom: 5vh; border-top: black solid; word-break: normal;">
             <div>
-                <p style="display: none;">kaeru</p>
-                <p style="display: none;">カエル</p>
-                <img class="AR-thumbnail" src="kaeru_thumbnail.png">
+                <p class="modelData">kaeru</p>
+                <p class="modelData">カエル</p>
+                <img class="AR-thumbnail" src="thumbnails/kaeru_thumbnail.png">
             </div>
             <div>
-                <p style="display: none;">panda</p>
-                <p style="display: none;">パンダ</p>
-                <img class="AR-thumbnail" src="panda_thumbnail.png">
+                <p class="modelData">panda</p>
+                <p class="modelData">パンダ</p>
+                <img class="AR-thumbnail" src="thumbnails/panda_thumbnail.png">
+            </div>
+            <div>
+                <p class="modelData">panda</p>
+                <p class="modelData">パンダ</p>
+                <img class="AR-thumbnail" src="thumbnails/mouse_thumbnail.png">
             </div>
         </div>
         <!-- <div class="swiper-container">
@@ -152,6 +157,7 @@
                 look.alt = modelName[1].textContent;
                 let show = document.getElementById('AR-show');
                 console.log("show")
+                show.children[0].style.display = "inline"
                 show.style.display = "block";
                 show.style.position = "fixed"
                 show.style.top = "50vh"
@@ -169,6 +175,7 @@
         let batsu = document.getElementById("batsu");
         batsu.addEventListener("click", function () {
             let show = document.getElementById('AR-show');
+            show.children[0].style.display = "none"
             console.log("hide")
             $('#AR-show').animate({
                 zIndex: 0,
@@ -248,7 +255,7 @@
 
         .AR-thumbnail {
             max-height: 100%;
-            max-width: 80%;
+            width: 80%;
             cursor: pointer;
         }
 
@@ -276,6 +283,11 @@
             position: fixed;
         }
 
+
+        .modelData {
+            display: none;
+        }
+
         #batsu {
             position: absolute;
             color: white;
@@ -286,6 +298,7 @@
             font-size: min(50px, 5vmax);
             background-color: rgba(0, 0, 0, 0);
             cursor: pointer;
+            z-index: inherit;
         }
     </style>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script> -->

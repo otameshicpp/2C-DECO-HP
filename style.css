@@ -131,11 +131,13 @@
             transform: translate(-50%,0%);
             border-bottom: medium solid white;
             margin: 10vh auto 10vh auto;
+            z-index: inherit;
         }
         .modelcontainer{
             width: 80vw;
             margin: auto;
             text-align: center;
+            z-index: inherit;
         }
 
         @media screen and ( max-width: 767px){
