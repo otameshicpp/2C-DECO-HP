@@ -153,6 +153,7 @@
             var windowWidth = window.innerWidth;
 
             if (windowWidth > 1024) {
+                console.log(windowWidth)
                 function no_scroll() {
 
                     document.addEventListener("mousewheel", scroll_control, { passive: false });
@@ -199,15 +200,14 @@
                     $('#is-loading').delay(900).fadeOut(800);
                     $('#loading').delay(600).fadeOut(300);
                 }
-
             } else if (windowWidth > 768) {
-
-                ;
+                document.getElementsByClassName('start')[0].style.display = "none"
+                    ;
 
             } else {
+                document.getElementsByClassName('start')[0].style.display = "none"
 
-
-                ;
+                    ;
 
             }
         });
