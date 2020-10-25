@@ -137,6 +137,9 @@
     </div>
 
     <script>
+        function zeroPadding(num, length) {
+            return ('0000000000' + num).slice(-length);
+        }
         document.getElementById("ushi").onscroll = function () {
             {
                 let spaceship = document.getElementById("spaceship")
@@ -144,8 +147,8 @@
                 let dif = spaceship.getBoundingClientRect().top - oya.getBoundingClientRect().top
                 // console.log("spacePictures/" + (Math.round(dif / 1000, 0.1) + 1) + ".png");
                 // let now = (Math.min(87, Math.round(dif / 45) + 1))
-                spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
-
+                if (window.innerWidth > 480) spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
+                else spaceship.style.backgroundImage = "url(spacePictures_phone_small/" + zeroPadding((Math.min(87, Math.round(dif / 90) * 2 + 1)), 4) + ".png)";
             }
             {
                 let moji = document.getElementById("setsumei");
@@ -192,17 +195,25 @@
         document.getElementById("batsu").addEventListener("click", closeVideo)
         // document.getElementById("PV").addEventListener("click", closeVideo)
         $(document).ready(function () {
-            for (var i = 1; i <= 87; i += 2) {
-                $("<img>").attr("src", "spacePictures_small/" + i + ".png");
-                // console.log("spacePictures_small / " + i + ".png");
-
+            if (window.innerWidth > 480) {
+                for (var i = 1; i <= 87; i += 2) {
+                    $("<img>").attr("src", "spacePictures_small/" + i + ".png");
+                }
+            } else {
+                for (var i = 1; i <= 87; i += 2) {
+                    $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
+                }
             }
         })
         setInterval(() => {
-            for (var i = 1; i <= 87; i += 2) {
-                $("<img>").attr("src", "spacePictures_small/" + i + ".png");
-                // console.log("spacePictures_small / " + i + ".png");
-
+            if (window.innerWidth > 480) {
+                for (var i = 1; i <= 87; i += 2) {
+                    $("<img>").attr("src", "spacePictures_small/" + i + ".png");
+                }
+            } else {
+                for (var i = 1; i <= 87; i += 2) {
+                    $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
+                }
             }
         }, 3000);
     </script>
