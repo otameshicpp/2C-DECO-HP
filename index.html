@@ -58,24 +58,23 @@
 
         </div>
     </header>
-    <div class="content">
-
-        <div class="top">
-            <img src="key151_smallerer.jpg" class="topimage">
-            <div class="title">
-                <img src="maintitle.png" class="titleimage">
-            </div>
-            <div class="video">
-                <a><img src="watch.png" class="watch"></a>
-            </div>
+    <div class="content" style="overflow: hidden;">
+        <!-- <div class="top"> -->
+        <img src="src/key151_smallerer.jpg" class="topimage">
+        <div class="title">
+            <img src="src/maintitle.png" class="titleimage">
         </div>
+        <div class="video">
+            <a><img src="src/watch.png" class="watch"></a>
+        </div>
+        <!-- </div> -->
 
         <div class="story">
-            <img src="story_img.png" class="storyimg">
+            <img src="src/story_img.png" class="storyimg">
         </div>
         <div class="stoimg">
             <p>あなたは今、宇宙にいる。</p>
-            <img src="point.png" class="img1">
+            <img src="src/point.png" class="img1">
             <!-- <h1 id="box" class="probox" style="
             z-index: 9999; color: white; top: 40vh;-webkit-text-fill-color: transparent;
             ">
@@ -83,16 +82,16 @@
             <p>その理由を突き止め、また、これからあなたの前に立ちはだかる</p>
             <p>イベントからゲットできる「宇宙船のかけら」をゲットして</p>
             <p>地球に無事帰らなければならない</p>
-            <img src="point.png" class="img1">
+            <img src="src/point.png" class="img1">
             <p>「宇宙船のかけら」を見つけるには下にある一番左のボタンを</p>
             <p>理由を突き止めるには真ん中のボタンを押して、冒険をはじめよう</p>
-            <img src="point.png" class="img1">
+            <img src="src/point.png" class="img1">
             <p>ちなみに、一番右のボタンはどちらもクリアするとクリックできるようになる</p>
         </div>
 
         <div class="logo">
-            <a href="Augmented.html"><img src="Regular_tetrahedron.png" class="cube"></a><a href="###"><img
-                    src="cube.png" class="cube"></a><a href="###"><img src="hatena.png" class="cube"></a>
+            <a href="Augmented.html"><img src="src/Regular_tetrahedron.png" class="cube"></a><a href="###"><img
+                    src="src/cube.png" class="cube"></a><a href="###"><img src="src/hatena.png" class="cube"></a>
         </div>
 
         <div class="animation" style="background-color: black;">
@@ -130,6 +129,11 @@
                 <p>&copy;the&nbsp;fictional&nbsp;world&nbsp;HP&nbsp;production&nbsp;committee</p>
             </div>
         </div>
+        <div id="PV">
+            <video src="PV.mp4" controls loading="lazy" id="PV_in"
+                style="position: relative; margin: auto; top:50%; width: 80%; transform: translate(0%,-50%);"></video>
+            <p id="batsu">×</p>
+        </div>
     </div>
 
     <script>
@@ -142,25 +146,6 @@
                 // let now = (Math.min(87, Math.round(dif / 45) + 1))
                 spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
 
-            }
-            {
-                // let moji = document.getElementById("box");
-                // let windowHeight = window.innerHeight;
-                // let basho = windowHeight - moji.getBoundingClientRect().top;
-
-                // if (basho >= windowHeight / 2 - moji.clientHeight * 2) {
-                //     basho -= windowHeight / 2 - moji.clientHeight * 2
-                //     basho /= 2;
-                //     let left = basho / 50
-                //     let right = left - 1.5
-                //     let colorLeft = "rgba(1,1,1," + left + ")"
-                //     let colorRight = "rgba(1,1,1," + right + ")"
-
-                //     moji.style.background = "-webkit-linear-gradient(135deg, " + colorRight + + " " + (100 - basho) + "%, " + colorLeft + ")";
-                //     moji.style.webkitBackgroundClip = "text";
-                // } else {
-                //     moji.style.background = "rgba(0,0,0,0)";
-                // }
             }
             {
                 let moji = document.getElementById("setsumei");
@@ -183,17 +168,40 @@
         }
     </script>
     <script>
+        document.getElementsByClassName("watch")[0].addEventListener("click", function () {
+            console.log("show")
+            let pv = document.getElementById("PV");
+            pv.style.display = "block";
+            console.log(pv);
+            $(pv).animate({
+                width: "100vw",
+                opacity: 1
+            }, 300)
+        })
+        function closeVideo() {
+            console.log("close")
+            let pv = document.getElementById("PV");
+            document.getElementById("PV_in").pause();
+            // console.log(document.getElementById("PV_in"));
+            $(pv).animate({
+                width: "0",
+                opacity: 0,
+                display: "none"
+            }, 300)
+        }
+        document.getElementById("batsu").addEventListener("click", closeVideo)
+        // document.getElementById("PV").addEventListener("click", closeVideo)
         $(document).ready(function () {
             for (var i = 1; i <= 87; i += 2) {
                 $("<img>").attr("src", "spacePictures_small/" + i + ".png");
-                console.log("spacePictures_small / " + i + ".png");
+                // console.log("spacePictures_small / " + i + ".png");
 
             }
         })
         setInterval(() => {
             for (var i = 1; i <= 87; i += 2) {
                 $("<img>").attr("src", "spacePictures_small/" + i + ".png");
-                console.log("spacePictures_small / " + i + ".png");
+                // console.log("spacePictures_small / " + i + ".png");
 
             }
         }, 3000);
