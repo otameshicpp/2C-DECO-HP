@@ -146,71 +146,71 @@
         </div> -->
     </div>
     <script>
-    
-    var $win = $(window);
 
-    $win.on('load resize', function() {
-      var windowWidth = window.innerWidth;
+        var $win = $(window);
 
-      if (windowWidth > 1024) {
-      function no_scroll() {
+        $win.on('load resize', function () {
+            var windowWidth = window.innerWidth;
 
-            document.addEventListener("mousewheel", scroll_control, { passive: false });
+            if (windowWidth > 1024) {
+                function no_scroll() {
 
-            document.addEventListener("touchmove", scroll_control, { passive: false });
-        }
+                    document.addEventListener("mousewheel", scroll_control, { passive: false });
 
-        function return_scroll() {
+                    document.addEventListener("touchmove", scroll_control, { passive: false });
+                }
 
-            document.removeEventListener("mousewheel", scroll_control, { passive: false });
+                function return_scroll() {
 
-            document.removeEventListener('touchmove', scroll_control, { passive: false });
-        }
+                    document.removeEventListener("mousewheel", scroll_control, { passive: false });
 
-        function scroll_control(event) {
-            event.preventDefault();
-        }
+                    document.removeEventListener('touchmove', scroll_control, { passive: false });
+                }
 
-        $(window).ready(function () {
-            var video = document.getElementsByTagName('video')[0];
-            video.addEventListener('ended', function () {
-                video.autoplay = false;
-                $('.start').fadeOut(500);
-                return_scroll();
-            }, false);
+                function scroll_control(event) {
+                    event.preventDefault();
+                }
+
+                $(window).ready(function () {
+                    var video = document.getElementsByTagName('video')[0];
+                    video.addEventListener('ended', function () {
+                        video.autoplay = false;
+                        $('.start').fadeOut(500);
+                        return_scroll();
+                    }, false);
+                });
+
+                $(function () {
+                    setTimeout(function () {
+                        no_scroll();
+                        $('.start p').fadeIn(000);
+                    }, 00);
+
+
+                });
+
+
+                $(function () {
+                    setTimeout('stopload()', 10000);
+                });
+
+                function stopload() {
+                    $('#loading__wrapper').css('display', 'block');
+                    $('#is-loading').delay(900).fadeOut(800);
+                    $('#loading').delay(600).fadeOut(300);
+                }
+
+            } else if (windowWidth > 768) {
+
+                ;
+
+            } else {
+
+
+                ;
+
+            }
         });
-
-        $(function () {
-            setTimeout(function () {
-                no_scroll();
-                $('.start p').fadeIn(000);
-            }, 00);
-
-
-        });
-
-
-        $(function () {
-            setTimeout('stopload()', 10000);
-        });
-
-        function stopload() {
-            $('#loading__wrapper').css('display', 'block');
-            $('#is-loading').delay(900).fadeOut(800);
-            $('#loading').delay(600).fadeOut(300);
-        }
-
-      } else if (windowWidth > 768) {
-
-        ;
-
-      } else {
-
-
-        ;
-
-      }
-    });
 
 
 
@@ -410,10 +410,11 @@
         .modelData {
             display: none;
         }
-        @media  screen and(max-width: 767px;){
-          .start{
-            display: block;
-          }
+
+        @media screen and(max-width: 767px) {
+            .start {
+                display: block;
+            }
         }
     </style>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script> -->
