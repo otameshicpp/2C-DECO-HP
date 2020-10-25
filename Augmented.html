@@ -32,10 +32,8 @@
 </head>
 
 <body>
-  <div id="is-loading">
- <div id="loading">
-  <video src="background.mp4" alt="loadingなう" ></video>
- </div>
+  <div class="start">
+  <p><video src="background.mp4" autoplay muted></video></p>
 </div>
   <div>
     <img src="cube.png" class="arlogo">
@@ -44,6 +42,7 @@
         <div class="story" style="padding-top: 5vh;">
             <img src="src/story_img.png" class="storyimg">
         </div>
+
         <div class="stoimg">
             <p>あなたは今、地球にいる。</p>
             <img src="src/point.png" class="img1">
@@ -148,16 +147,40 @@
     </div>
     <script>
 
-    $(function() {
-var h = $(window).height();
-$('#loading__wrapper').css('display','none');
-$('#is-loading ,#loading').height(h).css('display','block');
+    function no_scroll() {
+
+    document.addEventListener("mousewheel", scroll_control, { passive: false });
+
+    document.addEventListener("touchmove", scroll_control, { passive: false });
+}
+
+function return_scroll() {
+
+    document.removeEventListener("mousewheel", scroll_control, { passive: false });
+
+    document.removeEventListener('touchmove', scroll_control, { passive: false });
+}
+
+function scroll_control(event) {
+    event.preventDefault();
+}
+
+$( window ).ready(function(){
+  var video = document.getElementsByTagName('video')[0];
+  video.addEventListener('ended', function() {
+  video.autoplay=false;
+  $('.start').fadeOut(500);
+  return_scroll();
+  }, false);
 });
 
-$(window).load(function () {
-$('#is-loading').delay(900).fadeOut(800);
-$('#loading').delay(600).fadeOut(300);
-$('#loading__wrapper').css('display', 'block');
+$(function() {
+ setTimeout(function(){
+  no_scroll();
+  $('.start p').fadeIn(000);
+ },00);
+
+
 });
 
 
@@ -277,7 +300,41 @@ $('#loading').delay(600).fadeOut(300);
         * {
             font-family: serif;
         }
+        .start {
+          background: #ffffff;
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 9000;
+        padding: 0px;
+            margin: 0px;
+        }
+        .start p {
+          position: fixed;
+          left: 0%;
+          top: 0%;
+          margin: 0px;
+            padding: 0px;
+          display: none;
+          z-index: 9999;
+          width: 100%;
+            height: 100%;
+          text-align: center;
+        }
 
+        .start video{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          -webkit- transform: translateY(-50%) translateX(-50%);
+
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+          }
         .arlogo{
 
         }
