@@ -33,7 +33,8 @@
             color: #000;
         }
         .watch{
-            width:80%;
+            width:15vw;
+            min-width: 100px;
             cursor: pointer;
         }
 
