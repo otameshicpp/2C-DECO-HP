@@ -6,7 +6,7 @@
             margin: 0;
         }
         p{
-            width: 60vw;
+            /* width: 60vw; */
             margin: auto;
         }
         h2{
@@ -137,6 +137,31 @@
             width: 80vw;
             margin: auto;
             text-align: center;
+            z-index: inherit;
+        }
+
+        #PV{
+            display: none;
+            position: fixed;
+            top: 50vh;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80vw;
+            height: 100vh;
+            text-align: center;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, .8);
+        }
+        #batsu {
+            position: absolute;
+            color: white;
+            top: 0;
+            right: 2vw;
+            margin: 0;
+            font-weight: 900;
+            font-size: min(50px, 5vmax);
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
             z-index: inherit;
         }
 

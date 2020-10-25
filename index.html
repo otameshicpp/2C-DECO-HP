@@ -59,7 +59,6 @@
         </div>
     </header>
     <div class="content">
-
         <div class="top">
             <img src="src/key151_smallerer.jpg" class="topimage">
             <div class="title">
@@ -123,6 +122,11 @@
         <div class="footer">
 
         </div>
+        <div id="PV">
+            <video src="PV.mp4" controls
+                style="position: relative; margin: auto; top:50%; width: 80%; transform: translate(0%,-50%);"></video>
+            <p id="batsu">×</p>
+        </div>
     </div>
 
     <script>
@@ -135,25 +139,6 @@
                 // let now = (Math.min(87, Math.round(dif / 45) + 1))
                 spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
 
-            }
-            {
-                // let moji = document.getElementById("box");
-                // let windowHeight = window.innerHeight;
-                // let basho = windowHeight - moji.getBoundingClientRect().top;
-
-                // if (basho >= windowHeight / 2 - moji.clientHeight * 2) {
-                //     basho -= windowHeight / 2 - moji.clientHeight * 2
-                //     basho /= 2;
-                //     let left = basho / 50
-                //     let right = left - 1.5
-                //     let colorLeft = "rgba(1,1,1," + left + ")"
-                //     let colorRight = "rgba(1,1,1," + right + ")"
-
-                //     moji.style.background = "-webkit-linear-gradient(135deg, " + colorRight + + " " + (100 - basho) + "%, " + colorLeft + ")";
-                //     moji.style.webkitBackgroundClip = "text";
-                // } else {
-                //     moji.style.background = "rgba(0,0,0,0)";
-                // }
             }
             {
                 let moji = document.getElementById("setsumei");
@@ -176,17 +161,39 @@
         }
     </script>
     <script>
+        document.getElementsByClassName("watch")[0].addEventListener("click", function () {
+            console.log("show")
+            let pv = document.getElementById("PV");
+            pv.style.display = "block";
+            console.log(pv);
+            $(pv).animate({
+                width: "100vw",
+                opacity: 1
+            }, 300)
+        })
+        function closeVideo() {
+            console.log("close")
+            let pv = document.getElementById("PV");
+            console.log(pv);
+            $(pv).animate({
+                width: "0",
+                opacity: 0,
+                display: "none"
+            }, 300)
+        }
+        document.getElementById("batsu").addEventListener("click", closeVideo)
+        // document.getElementById("PV").addEventListener("click", closeVideo)
         $(document).ready(function () {
             for (var i = 1; i <= 87; i += 2) {
                 $("<img>").attr("src", "spacePictures_small/" + i + ".png");
-                console.log("spacePictures_small / " + i + ".png");
+                // console.log("spacePictures_small / " + i + ".png");
 
             }
         })
         setInterval(() => {
             for (var i = 1; i <= 87; i += 2) {
                 $("<img>").attr("src", "spacePictures_small/" + i + ".png");
-                console.log("spacePictures_small / " + i + ".png");
+                // console.log("spacePictures_small / " + i + ".png");
 
             }
         }, 3000);
