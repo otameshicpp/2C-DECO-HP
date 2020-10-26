@@ -164,6 +164,7 @@
     </div>
 
     <script>
+        var userAgent = window.navigator.userAgent;
         function zeroPadding(num, length) {
             return ('0000000000' + num).slice(-length);
         }
@@ -174,8 +175,13 @@
                 let dif = spaceship.getBoundingClientRect().top - oya.getBoundingClientRect().top
                 // console.log("spacePictures/" + (Math.round(dif / 1000, 0.1) + 1) + ".png");
                 // let now = (Math.min(87, Math.round(dif / 45) + 1))
-                if (window.innerWidth > 480) spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
-                else spaceship.style.backgroundImage = "url(spacePictures_phone_small/" + zeroPadding((Math.min(87, Math.round(dif / 90) * 2 + 1)), 4) + ".png)";
+                if (userAgent == "Safari") {
+                    if (window.innerWidth > 480) spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
+                    else spaceship.style.backgroundImage = "url(spacePictures_phone_small/" + zeroPadding((Math.min(87, Math.round(dif / 90) * 2 + 1)), 4) + ".png)";
+                } else {
+                    if (window.innerWidth > 480) spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
+                    else spaceship.style.backgroundImage = "url(spacePicture_small_webp/" + zeroPadding((Math.min(87, Math.round(dif / 90) * 2 + 1)), 4) + ".webp)";
+                }
             }
             {
                 let moji = document.getElementById("setsumei");
@@ -227,8 +233,14 @@
                     $("<img>").attr("src", "spacePictures_small/" + i + ".png");
                 }
             } else {
-                for (var i = 1; i <= 87; i += 2) {
-                    $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
+                if (userAgent == "Safari") {
+                    for (var i = 1; i <= 87; i += 2) {
+                        $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
+                    }
+                } else {
+                    for (var i = 1; i <= 87; i += 2) {
+                        $("<img>").attr("src", "spacePicture_small_webp/" + zeroPadding(i, 4) + ".webp");
+                    }
                 }
             }
         })
@@ -238,8 +250,14 @@
                     $("<img>").attr("src", "spacePictures_small/" + i + ".png");
                 }
             } else {
-                for (var i = 1; i <= 87; i += 2) {
-                    $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
+                if (userAgent == "Safari") {
+                    for (var i = 1; i <= 87; i += 2) {
+                        $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
+                    }
+                } else {
+                    for (var i = 1; i <= 87; i += 2) {
+                        $("<img>").attr("src", "spacePicture_small_webp/" + zeroPadding(i, 4) + ".webp");
+                    }
                 }
             }
         }, 3000);
