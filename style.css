@@ -48,6 +48,7 @@
         }
         .scrollimg{
         width:3%;
+        min-width: 30px;
       }
         .titleimage{
             width: 100%;
