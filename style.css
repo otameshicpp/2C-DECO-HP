@@ -216,12 +216,12 @@ margin-top: 5vh;
     color: white;
     position: static;
     padding: 5vmin;
-    font-size: max(10px,1vmax);
+    font-size: max(15px,1vmax);
 }
 .foo-title{
-    width: 50vw;
+    width: max(300px,20vmax);
     color: white;
-    background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+    background: -webkit-linear-gradient(0deg, #ff00ff, #00ffff 50%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
