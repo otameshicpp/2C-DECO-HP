@@ -216,7 +216,7 @@
             color: white;
             position: static;
             padding: 5vmin;
-
+            font-size: max(10px,1vmax);
         }
         
         @media screen and ( max-width: 767px){
