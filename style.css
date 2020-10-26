@@ -54,7 +54,7 @@
         }
         .title{
             position: absolute;
-            top: 50h;
+            top: 50vh;
             left: 50vw;
             max-width: 120%;
             width: 1000px;
