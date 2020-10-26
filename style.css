@@ -139,10 +139,13 @@
             text-align: center;
         }
         .tweet{
-            padding-top: 100px;
-            width: 50vw;
-            height: 60vw;
+            padding-top: 5vh;
+            width: 80vw;
+            max-width: 500px;
+            height: 70vh;
+            max-height: 500px;
             margin: auto;
+            overflow: hidden;
         }
         #galery{
             position: absolute;
@@ -207,7 +210,12 @@
             min-height: 100%; */
             top: 0;
         }
-
+        .footer{
+            color: white;
+            position: static;
+            padding: 5vmax;
+        }
+        
         @media screen and ( max-width: 767px){
 
 
