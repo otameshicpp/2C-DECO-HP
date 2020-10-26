@@ -137,6 +137,7 @@
         }
         .timeline{
             text-align: center;
+            margin-bottom: 5vh;
         }
         .tweet{
             padding-top: 5vh;
@@ -211,9 +212,11 @@
             top: 0;
         }
         .footer{
+            background-color: #363636;
             color: white;
             position: static;
-            padding: 5vmax;
+            padding: 5vmin;
+
         }
         
         @media screen and ( max-width: 767px){
