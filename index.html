@@ -90,7 +90,7 @@
         <div class="story">
             <img src="src/story_img.png" class="storyimg">
         </div>
-        <div class="stoimg">
+        <div class="stoimg" id="down">
             <p>あなたは今、宇宙にいる。</p>
             <img src="src/point.png" class="img1">
             <!-- <h1 id="box" class="probox" style="
@@ -243,42 +243,42 @@
             }
         }, 3000);
 
-        $(function(){
-    $(window).scroll(function (){
-        $('.cube').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 250){
-                $(this).addClass('scrollin');
-            }
+        $(function () {
+            $(window).scroll(function () {
+                $('.cube').each(function () {
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight + 250) {
+                        $(this).addClass('scrollin');
+                    }
+                });
+            });
         });
-    });
-});
-$(function(){
-$(window).scroll(function (){
-$('.cube2').each(function(){
-    var elemPos = $(this).offset().top;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll > elemPos - windowHeight + 250){
-        $(this).addClass('scrollin');
-    }
-});
-});
-});
-$(function(){
-$(window).scroll(function (){
-$('.cube3').each(function(){
-    var elemPos = $(this).offset().top;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll > elemPos - windowHeight + 250){
-        $(this).addClass('scrollin');
-    }
-});
-});
-});
+        $(function () {
+            $(window).scroll(function () {
+                $('.cube2').each(function () {
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight + 250) {
+                        $(this).addClass('scrollin');
+                    }
+                });
+            });
+        });
+        $(function () {
+            $(window).scroll(function () {
+                $('.cube3').each(function () {
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight + 250) {
+                        $(this).addClass('scrollin');
+                    }
+                });
+            });
+        });
 
 
 

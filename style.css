@@ -79,6 +79,7 @@
 .logo{
     background-color: #ffffff;
     text-align: center;
+    /* z-index: 0; */
 }
 
 .logo img{
@@ -284,6 +285,11 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.storyp{
+    box-shadow: 0 50vh 2px 3px black;
+    z-index: 9999;
 }
 @media screen and ( max-width: 767px){
 
