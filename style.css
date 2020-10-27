@@ -28,6 +28,9 @@
             /* right: 100px; */
             transform: translate(-50%,0%);
         }
+        .scroll{
+          text-align: center;
+        }
         .titleimage{
             width: 100%;
         }
