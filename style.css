@@ -25,6 +25,9 @@
         .stoimg h1,p{
           color:#ffffff;
         }
+        .storyactive{
+          background-color: #1A1A1A;
+        }
         .topimage{
             position: relative;
             min-height: 100vh;
