@@ -104,13 +104,13 @@
             <p>「宇宙船のかけら」を見つけるには下にある一番左のボタンを</p>
             <p>理由を突き止めるには真ん中のボタンを押して、冒険をはじめよう</p>
             <img src="src/point.png" class="img1">
-            <p>ちなみに、一番右のボタンは10/31に開放される</p>
+            <p class="storyp">ちなみに、一番右のボタンは10/31に開放される</p>
         </div>
 
 
         <div class="logo">
-            <a href="Augmented.html"><img src="src/Regular_tetrahedron.png" class="cube"></a><a href="virtual.html"><img
-                    src="src/cube.png" class="cube"></a><a href="###"><img src="src/hatena.png" class="cube"></a>
+            <a href="Augmented.html"><img src="src/Regular_tetrahedron.png" class="cube2"></a><a href="virtual.html"><img
+                    src="src/cube.png" class="cube3"></a><a href="###"><img src="src/hatena.png" class="cube3"></a>
         </div>
 
 
@@ -240,6 +240,46 @@
                 }
             }
         }, 3000);
+
+        $(function(){
+    $(window).scroll(function (){
+        $('.cube').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 250){
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
+$(function(){
+$(window).scroll(function (){
+$('.cube2').each(function(){
+    var elemPos = $(this).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll > elemPos - windowHeight + 250){
+        $(this).addClass('scrollin');
+    }
+});
+});
+});
+$(function(){
+$(window).scroll(function (){
+$('.cube3').each(function(){
+    var elemPos = $(this).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll > elemPos - windowHeight + 250){
+        $(this).addClass('scrollin');
+    }
+});
+});
+});
+
+
+
     </script>
 </body>
 

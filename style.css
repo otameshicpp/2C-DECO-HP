@@ -22,11 +22,15 @@
         .stoimg{
           background-color: #1A1A1A;
         }
+        .storyp{
+          padding-bottom: 40px;
+        }
         .stoimg h1,p{
           color:#ffffff;
         }
         .story{
           background-color: #1A1A1A;
+          padding-bottom: 40px;
         }
         .topimage{
             position: relative;
@@ -38,6 +42,7 @@
             transform: translate(-50%,0%);
         }
         .scroll{
+          background-color: #ffffff;
           text-align: center;
           padding-bottom: 40px;
         }
@@ -88,6 +93,8 @@
             padding-right: 30px;
             padding-top: 100px;
             padding-bottom: 100px;
+            opacity: 0.1;
+            transform: translateY(20px);
         }
         .cube:hover{
             width: 15%;
@@ -97,6 +104,59 @@
             padding-top: 100px;
             padding-bottom: 100px;
         }
+        .cube.scrollin {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .cube2{
+            width: 10%;
+            transform: translate(0%,-0%);
+            transition: all 1s;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            opacity: 0.1;
+            transform: translateY(45px);
+        }
+        .cube2:hover{
+            width: 15%;
+            transform: translate(0%,-0%);
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .cube2.scrollin {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .cube3{
+            width: 10%;
+            transform: translate(0%,-0%);
+            transition: all 1s;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            opacity: 0.1;
+            transform: translateY(70px);
+        }
+        .cube3:hover{
+            width: 15%;
+            transform: translate(0%,-0%);
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .cube3.scrollin {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+
 
 
         .story{
