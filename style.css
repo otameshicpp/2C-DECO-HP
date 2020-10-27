@@ -19,6 +19,12 @@
             position: relative;
             text-align: center;
         }
+        .stoimg{
+          background-color: #1A1A1A;
+        }
+        .stoimg h1,p{
+          color:#ffffff;
+        }
         .topimage{
             position: relative;
             min-height: 100vh;
