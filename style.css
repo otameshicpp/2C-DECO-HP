@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
         body{
-            background-color: #fff;
+            background-color: #1A1A1A;
             font-size: 15px;
             font-family: 'Noto Sans JP', sans-serif;
             font-weight: 300;
@@ -25,7 +25,7 @@
         .stoimg h1,p{
           color:#ffffff;
         }
-        .storyactive{
+        .story{
           background-color: #1A1A1A;
         }
         .topimage{
@@ -72,6 +72,7 @@
             text-align: center;
         }
         .logo{
+          background-color: #ffffff;
             text-align: center;
         }
 
