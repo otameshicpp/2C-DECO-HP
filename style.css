@@ -30,8 +30,10 @@
         }
         .scroll{
           text-align: center;
-          width: 4%;
         }
+        .scrollimg{
+        width:5%;
+      }
         .titleimage{
             width: 100%;
         }
