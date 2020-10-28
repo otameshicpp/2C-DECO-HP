@@ -278,6 +278,7 @@
     position: static;
     padding: 5vmin;
     font-size: max(15px,1vmax);
+    text-align: left;
 }
 .foo-title{
     width: max(300px,20vmax);
