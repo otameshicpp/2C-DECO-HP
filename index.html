@@ -33,10 +33,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet"> -->
     <script src="jquery-3.5.1.min.js"></script>
-    <!-- <script src="js/bootstrap.min.js"></script> -->
 
     <script>
         $(function () {
@@ -97,10 +94,6 @@
         <div class="stoimg" id="down">
             <p>あなたは今、宇宙にいる。</p>
             <img src="src/point.png" class="img1">
-            <!-- <h1 id="box" class="probox" style="
-                    z-index: 9999; color: white; top: 40vh;-webkit-text-fill-color: transparent;
-                    ">
-                        その理由を突き止め、また、これからあなたの前に立ちはだかる</h1> -->
             <p>その理由を突き止め、また、これからあなたの前に立ちはだかる</p>
             <p>イベントからゲットできる「宇宙船のかけら」をゲットして</p>
             <p>地球に無事帰らなければならない</p>
@@ -124,19 +117,11 @@
 
         <div class="animation" style="background-color: black;">
             <div class="photo">
-                <!-- <img src="exsample.png" class="storyimg"> -->
                 <div id="spaceship"></div>
                 <h1 id="setsumei"
                     style="font-size: max(20px, 2vw);font-family: serif;  z-index: 9999; color: white; position: sticky;-webkit-text-fill-color: transparent; width: calc(max(20px, 2vw)*11); max-width: 80%; margin:auto; padding: 0;">
                     その世界は、すぐそこに</h1>
             </div>
-
-            <!-- <div class="photo">
-            <img src="photos.png" class="storyimg">
-
-            <p>現在準備中　そろそろ完成に向けて頑張る！
-            <p>
-        </div> -->
         </div>
         <div class="timeline">
             <img src="src/tweet.png" class="storyimg">
@@ -176,9 +161,7 @@
                 let spaceship = document.getElementById("spaceship")
                 let oya = spaceship.parentElement
                 let dif = spaceship.getBoundingClientRect().top - oya.getBoundingClientRect().top
-                // console.log("spacePictures/" + (Math.round(dif / 1000, 0.1) + 1) + ".png");
-                // let now = (Math.min(87, Math.round(dif / 45) + 1))
-                if (userAgent == "Safari") {
+                if (userAgent.indexOf("Safari") >= 0) {
                     if (window.innerWidth > 480) spaceship.style.backgroundImage = "url(spacePictures_small/" + (Math.min(87, Math.round(dif / 90) * 2 + 1)) + ".png)";
                     else spaceship.style.backgroundImage = "url(spacePictures_phone_small/" + zeroPadding((Math.min(87, Math.round(dif / 90) * 2 + 1)), 4) + ".png)";
                 } else {
@@ -221,7 +204,6 @@
             console.log("close")
             let pv = document.getElementById("PV");
             document.getElementById("PV_in").pause();
-            // console.log(document.getElementById("PV_in"));
             $(pv).animate({
                 width: "0",
                 opacity: 0,
@@ -229,14 +211,13 @@
             }, 300)
         }
         document.getElementById("batsu").addEventListener("click", closeVideo)
-        // document.getElementById("PV").addEventListener("click", closeVideo)
         $(document).ready(function () {
             if (window.innerWidth > 480) {
                 for (var i = 1; i <= 87; i += 2) {
                     $("<img>").attr("src", "spacePictures_small/" + i + ".png");
                 }
             } else {
-                if (userAgent == "Safari") {
+                if (userAgent.indexOf("Safari") >= 0) {
                     for (var i = 1; i <= 87; i += 2) {
                         $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
                     }
@@ -253,7 +234,7 @@
                     $("<img>").attr("src", "spacePictures_small/" + i + ".png");
                 }
             } else {
-                if (userAgent == "Safari") {
+                if (userAgent.indexOf("Safari") >= 0) {
                     for (var i = 1; i <= 87; i += 2) {
                         $("<img>").attr("src", "spacePictures_phone_small/" + zeroPadding(i, 4) + ".png");
                     }
