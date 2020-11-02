@@ -28,14 +28,30 @@
 </head>
 
 <body>
+  <div>
+      <img src="src/cube.png" class="vrlogo">
+  </div>
     <div class="start">
         <p><video src="background3.mp4" autoplay muted></video></p>
     </div>
-    <div class="coming">
+    <div class="vrstory" style="padding-top: 5vh;">
+        <img src="src/vrstory.png" class="vrstoryimg">
+    </div>
+    <div class="stoimg">
+        <p>あなたは今、宇宙にいる。</p>
+        <img src="src/point.png" class="img1">
+        <p>以下の「迷路への入り口」をクリックして</p>
+        <p>宇宙の迷宮からの脱出をしてほしい</p>
+        <img src="src/point.png" class="img1">
+        <p>リンク先のページを少しスクロールすれば、操作方法はわかる</p>
+        <p>パソコンでないとゲームできないので注意してほしい</p>
+        <img src="src/point.png" class="img1">
+        <p>健闘を祈る</p>
+    </div>
+    <div　class="coming">
+      <a href="https://unityroom.com/games/tsukukoma_2c_hr"><h1>迷路への入口</h1></a>
+    </div>
 
-    <h1>coming soon...</h1>]
-
-  </div>
 
 
 </body>
@@ -113,6 +129,30 @@ h1{
 .coming{
   text-align: center;
 }
+a{
+  text-align: center;
+}
+.vrlogo {
+    width: 10%;
+    min-width: 150px;
+    transform: translate(0%, -0%);
+    transition: all 1s;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.vrstory {
+    padding-top: 100px;
+    width: 60vw;
+    margin: auto;
+    text-align: center;
+}
+
+.vrstoryimg {
+    width: 30vw;
+    padding-bottom: 40px;
+}
     .start {
         background: #ffffff;
         position: fixed;
@@ -149,10 +189,35 @@ h1{
         margin: 0px;
         padding: 0px;
     }
+    body {
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1A1A1A;
+    }
 
     @media screen and(max-width: 767px) {
         .start {
             display: block;
+        }
+        .vrlogo {
+            width: 175%;
+            transform: translate(0%, -0%);
+            transition: all 1s;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .vrstory {
+            padding-top: 20px;
+            width: 60vw;
+            margin: auto;
+            text-align: center;
+        }
+
+        .vrstoryimg {
+            width: 60vw;
+            padding-bottom: 10px;
         }
     }
 
