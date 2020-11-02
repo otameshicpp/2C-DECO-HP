@@ -34,6 +34,7 @@
 </head>
 
 <body>
+    <p style="display: none;">push test</p>
     <div class="start">
         <p><video src="background2.mp4" autoplay muted></video></p>
     </div>
@@ -68,6 +69,7 @@
             <p style="color: tomato;">※画像をつけるには あらかじめツイート画面でサイトのサムネイルを削除してください</p>
             <img src="src/point.png" class="img1">
             <p>Google chromeアプリではARボタンが表示されない可能性があります</p>
+            <h1 style="color: tomato; font-size: 2vw;">現在、HRでにしーちゃんの3Dモデルを公開しています！是非お越しください！</h1>
         </div>
         <div class="button">
             <a href="https://twitter.com/share" class="twitter-share-button"
@@ -77,7 +79,8 @@
         <div id="AR-show">
             <div class="modelcontainer">
                 <h1 class="model">カエル2</h1>
-                <model-viewer ar alt="カエル" id="modellook" src="3Dmodels/kaeru.glb" ios-src="3Dmodels/kaeru.usdz"
+                <model-viewer ar autoplay alt="カエル" id="modellook" src="3Dmodels/kaeru.glb"
+                    ios-src="3Dmodels/kaeru.usdz"
                     style="width:60vw;height:60vh;display: block; margin: auto;z-index: inherit;"
                     background-color="#70BCD1" shadow-intensity="0.7" camera-controls interaction-prompt="auto"
                     auto-rotate ar magic-leap>
@@ -86,7 +89,7 @@
             </div>
         </div>
         <div
-            style="display: flex; height: 100vw; width: 80vw; margin:auto; padding-top: 5vh; margin-top: 5vh; margin-bottom: 5vh; border-top: #ffffff solid; word-break: normal; flex-wrap: wrap; justify-content: center; align-content: center;">
+            style="display: flex; height: 130vw; width: 80vw; margin:auto; padding-top: 5vh; margin-top: 5vh; margin-bottom: 5vh; border-top: #ffffff solid; word-break: normal; flex-wrap: wrap; justify-content: center; align-content: center;">
             <div class="model-data-container">
                 <p class="modelData">kaeru</p>
                 <p class="modelData">カエル</p>
@@ -138,6 +141,16 @@
                 <p class="modelData">cup</p>
                 <p class="modelData"> コップ</p>
                 <img class="AR-thumbnail" src="thumbnails/cup_thumbnail.png">
+            </div>
+            <div class="model-data-container">
+                <p class="modelData">pampkin</p>
+                <p class="modelData"> Happy Halloween!</p>
+                <img class="AR-thumbnail" src="thumbnails/pumpkin_thumbnail.png">
+            </div>
+            <div class="model-data-container">
+                <p class="modelData">ketten</p>
+                <p class="modelData">ケッテンクラート</p>
+                <img class="AR-thumbnail" src="thumbnails/ketten_thumbnail.png">
             </div>
             <div class="model-data-container">
                 <p class="modelData">piaano</p>
