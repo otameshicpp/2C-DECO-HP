@@ -13,6 +13,8 @@
     <link rel="canonical" href="リンク" />
     <meta property="og:title" content="the fictional world | 2CHR公式" />
     <meta property="og:type" content="website" />
+    <meta property="twitter:image" content="https://the-fictional-world.net/favicon.png" />
+    <meta property="twitter:title" content="2020筑駒文化祭2CHR公式サイト" />
     <meta property="og:description" content="ようこそ！筑駒2CHR文化祭デコへ。VRとARの感動を、今。" />
     <meta name="twitter:site" content="@2C_AR_VR" />
     <meta name="twitter:description" content="ようこそ！筑駒2CHR文化祭デコへ。VRとARの感動を、今。" />
@@ -28,14 +30,44 @@
 </head>
 
 <body>
+  <div>
+      <img src="src/cube.png" class="vrlogo">
+  </div>
     <div class="start">
         <p><video src="background3.mp4" autoplay muted></video></p>
     </div>
-    <div class="coming">
-
-    <h1>coming soon...</h1>]
-
-  </div>
+    <div class="vrstory" style="padding-top: 5vh;">
+        <img src="src/vrstory.png" class="vrstoryimg">
+    </div>
+    <div class="stoimg">
+        <p>あなたは今、宇宙にいる。</p>
+        <img src="src/point.png" class="img1">
+        <p>以下の「迷路への入り口」をクリックして</p>
+        <p>宇宙の迷宮からの脱出をしてほしい</p>
+        <img src="src/point.png" class="img1">
+        <p>リンク先のページを少しスクロールすれば、操作方法はわかる</p>
+        <h1>パソコンでないとゲームできないので注意してほしい</h1>
+        <img src="src/point.png" class="img1">
+        <p>健闘を祈る</p>
+    </div>
+    <div　class="coming">
+      <a href="https://unityroom.com/games/tsukukoma_2c_hr"><h1>迷路への入口</h1></a>
+    </div>
+    <div class="footer">
+        <h3 class="foo-title">the fictional world</h3>
+        <ul>
+            <li style="margin: 2vh 0px;"><a href="https://tsukukoma.bunkasai.info/" style="color: white;"
+                    target="_blank">本校文化祭公式HP</a>
+            </li>
+            <li style="margin: 2vh 0px;">お問い合わせ&middot;ご感想</li>
+            <li style="margin: 2vh 0px;">
+                <a href="index.html" style="color: white;">topに戻る</a>
+            </li>
+        </ul>
+        <div class="copy">
+            <p>&copy;the&nbsp;fictional&nbsp;world&nbsp;HP&nbsp;production&nbsp;committee</p>
+        </div>
+    </div>
 
 
 </body>
@@ -113,6 +145,30 @@ h1{
 .coming{
   text-align: center;
 }
+a{
+  text-align: center;
+}
+.vrlogo {
+    width: 10%;
+    min-width: 150px;
+    transform: translate(0%, -0%);
+    transition: all 1s;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.vrstory {
+    padding-top: 100px;
+    width: 60vw;
+    margin: auto;
+    text-align: center;
+}
+
+.vrstoryimg {
+    width: 30vw;
+    padding-bottom: 40px;
+}
     .start {
         background: #ffffff;
         position: fixed;
@@ -149,10 +205,35 @@ h1{
         margin: 0px;
         padding: 0px;
     }
+    body {
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1A1A1A;
+    }
 
     @media screen and(max-width: 767px) {
         .start {
             display: block;
+        }
+        .vrlogo {
+            width: 175%;
+            transform: translate(0%, -0%);
+            transition: all 1s;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .vrstory {
+            padding-top: 20px;
+            width: 60vw;
+            margin: auto;
+            text-align: center;
+        }
+
+        .vrstoryimg {
+            width: 60vw;
+            padding-bottom: 10px;
         }
     }
 
